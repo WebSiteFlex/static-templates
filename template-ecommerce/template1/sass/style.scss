@@ -1,0 +1,215 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.gridFather {
+    position: relative;
+    font-size: 20px;
+}
+
+//color link
+
+@import "_about.scss", "_contact.scss", "_faq.scss", "giftCard.scss", "_variables.scss";
+
+
+
+.containerTitleNav {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.titleNav {
+    text-transform: capitalize;
+    font-size: 1.0625rem;
+    font-weight: 600;
+}
+
+#navbarSupportedContent {
+    margin-left: 120px;
+}
+
+.searchStyles{
+    color: black;
+    font-weight: 600;
+    text-transform: capitalize;
+    width: 400px;
+    height: auto;
+}
+
+#submit{
+    all: unset;
+    @include buttonSubmit;
+}
+//title
+
+.titleContainer{
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+        color: black;
+        font-size: 45px;
+        font-weight: 700;
+    }
+}
+
+//products
+
+#products{
+    width: 100%;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(4,3fr);
+    grid-template-rows: repeat(4,3fr);
+    gap: 2px;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+        img{
+            width: 400px;
+            height: 400px;
+            transition: all 0.3s linear;
+            cursor: pointer;
+
+            &:hover{
+              padding: 20px;
+              box-shadow: inset 0 0 10px 1px;
+              border-radius: 10px;
+            }
+        }
+
+        h5{
+            color: black;
+            font-weight: 500;
+            font-size: 22px;
+            text-transform:capitalize ;
+        }
+    }
+}
+//article
+.aboutIntro{
+    width: 100%;
+    height:900px;
+    padding: 90px;
+    background-color:#F7F6F6;
+
+    h2{
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    p{
+        text-align: justify;
+    }
+
+
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 500px;
+    background-color:#121212;
+    box-shadow: -0px 0 2px 2px;
+
+    .aditionalInfo{
+        width: 70%;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        margin-left: 12.5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        div{
+            ul{
+                list-style: none;
+                li{
+                    color: white;
+                    text-transform: capitalize;
+                    font-size: 18px;
+                }
+
+                li > a{
+                    all: unset;
+                    text-transform: capitalize;
+                    cursor: pointer
+                }
+            }
+        }
+    }
+
+    .formContainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+        form{
+            label{
+                color:#757575;
+                font-weight: 500;
+            }
+          div{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-wrap: nowrap;
+
+            input{
+                all: unset;
+                @include input;
+            }
+            button{
+                all: unset;
+                @include buttonSubscribe;
+            }
+          }
+        }
+    }
+    
+}
+
+.containerSpan{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #757575;
+
+    span{
+        text-transform: capitalize;
+        transition: color 0.3s ease;
+        &:hover{
+            color: white;
+        }
+    }
+}
+
+
