@@ -1,0 +1,23 @@
+$lowColor:#E3CBAA;
+$mediumColor:#57473A;
+$highColor:#1A1613;
+
+//button global
+
+@mixin globalButton{
+    width: 180px;
+    height: 40px;
+    padding: 6px;
+    color: white;
+    border: 1px solid white;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover{
+        background-color: whitesmoke;
+        color: $lowColor;
+    }
+}
